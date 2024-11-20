@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Library</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 text-gray-800 font-sans">
+    <!-- Header -->
+    <header class="bg-purple-500 text-white fixed top-0 w-full z-10 shadow-md">
+      <nav
+        class="container mx-auto flex justify-between items-center py-4 px-6"
+      >
+        <a href="/index.html" class="text-xl font-bold">
+          <img
+            src="./logoBoiconner.svg"
+            width="220"
+            height="200"
+            alt="BoiConner home"
+          />
+        </a>
+        <ul class="flex space-x-6">
+          <li><a href="/index.html" class="hover:underline">Home</a></li>
+          <li><a href="/book.html" class="hover:underline">Books</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="mt-16 text-center py-16 bg-gradient-to-br from-orange-100 bg-purple-200"
+    >
+      <h1 class="text-4xl font-bold mb-4">Welcome to BoiCornner</h1>
+      <p class="text-lg mb-6">
+        Discover, explore, and download your favorite books with ease!
+      </p>
+      <a
+        href="/book.html"
+        class="bg-purple-500 text-white px-6 py-3 rounded-full shadow-md hover:bg-purple-600"
+      >
+        Browse Books
+      </a>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-10">Why Choose Us?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <img
+              src="https://via.placeholder.com/100"
+              alt="Feature 1"
+              class="mx-auto mb-4"
+            />
+            <h3 class="text-xl font-bold">Vast Collection</h3>
+            <p>Access thousands of books across various genres.</p>
+          </div>
+          <div class="text-center">
+            <img
+              src="https://via.placeholder.com/100"
+              alt="Feature 2"
+              class="mx-auto mb-4"
+            />
+            <h3 class="text-xl font-bold">Easy Downloads</h3>
+            <p>Quick and hassle-free PDF downloads anytime.</p>
+          </div>
+          <div class="text-center">
+            <img
+              src="https://via.placeholder.com/100"
+              alt="Feature 3"
+              class="mx-auto mb-4"
+            />
+            <h3 class="text-xl font-bold">100% Free</h3>
+            <p>Enjoy all features without any hidden charges.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Books Section -->
+    <section class="py-16 bg-gray-100">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-10">Popular Books</h2>
+        <div
+          id="popularBooksContainer"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+        >
+          <!-- Popular Books Will Be Injected Here -->
+        </div>
+        <div class="text-center mt-6">
+          <a
+            href="/book.html"
+            class="bg-red-500 text-white px-6 py-3 rounded-full shadow-md hover:bg-purple-600"
+          >
+            View All Books
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-gradient-to-br from-orange-100 to-purple-200">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-10">What Our Users Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white shadow-md rounded-lg p-6">
+            <p class="italic">
+              "This library has completely changed the way I read books. Easy to
+              find and download. Absolutely love it!"
+            </p>
+            <p class="text-right mt-4 font-bold">- User A</p>
+          </div>
+          <div class="bg-white shadow-md rounded-lg p-6">
+            <p class="italic">
+              "A must-visit for all book lovers. The variety and ease of use are
+              top-notch."
+            </p>
+            <p class="text-right mt-4 font-bold">- User B</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-purple-500 text-white text-center py-4">
+      <p>&copy; 2024 Book Library. All rights reserved.</p>
+    </footer>
+
+    <script>
+      const popularBooks = [
+        {
+          id: 1,
+          title: "The Great Gatsby",
+          category: "fiction",
+          image:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsfxrcUtlaLqSTTpA7N9cWKIopvRNtXngM2A&s",
+          pdf: "pdf/gatsby.pdf",
+        },
+        {
+          id: 2,
+          title: "A Brief History of Time",
+          category: "science",
+          image:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsfxrcUtlaLqSTTpA7N9cWKIopvRNtXngM2A&s",
+          pdf: "pdf/brief-history.pdf",
+        },
+        {
+          id: 3,
+          title: "Sapiens: A Brief History of Humankind",
+          category: "non-fiction",
+          image:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsfxrcUtlaLqSTTpA7N9cWKIopvRNtXngM2A&s",
+          pdf: "pdf/sapiens.pdf",
+        },
+        {
+          id: 4,
+          title: "1984",
+          category: "fiction",
+          image:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsfxrcUtlaLqSTTpA7N9cWKIopvRNtXngM2A&s",
+          pdf: "pdf/1984.pdf",
+        },
+      ];
+
+      const popularBooksContainer = document.getElementById(
+        "popularBooksContainer"
+      );
+
+      function displayPopularBooks() {
+        popularBooksContainer.innerHTML = "";
+        popularBooks.forEach((book) => {
+          const bookCard = document.createElement("div");
+          bookCard.classList.add(
+            "bg-white",
+            "rounded-lg",
+            "shadow-md",
+            "p-4",
+            "text-center"
+          );
+          bookCard.innerHTML = `
+            <img src="${book.image}" alt="${book.title}" class="w-full h-48 object-cover rounded-md mb-4">
+            <h3 class="font-bold text-lg mb-2">${book.title}</h3>
+            <p class="text-gray-600 mb-4">${book.category}</p>
+            <a href="${book.pdf}" target="_blank" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-purple-600">Download PDF</a>
+          `;
+          popularBooksContainer.appendChild(bookCard);
+        });
+      }
+
+      // Initial Render
+      displayPopularBooks();
+    </script>
+  </body>
+</html>
